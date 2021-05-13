@@ -1,0 +1,61 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    border-radius: 40px;
+    box-shadow: 10px 5px 5px rgba(77, 77, 77, 0.5);
+}
+
+.nav-links {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: baseline;
+    justify-content: space-evenly;
+    align-content: space-between;
+    width: 400px;
+    margin-right: 100px;
+}
+
+.nav-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    margin-right: 5px;
+}
+
+.nav-header {
+    color: white;
+    margin-left: 18px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    position: sticky;
+    margin-top: 15px;
+    padding: 1rem;
+    text-align: center;
+    background-color: black;
+    margin-top: 2%;
+    font-size: 15px;
+}
+
+.home-page {
+    color: white;
+}
+
+
+.home:hover, .about:hover, .projects:hover, .contacts:hover {
+    font-weight: bold;
+    font-size: 16px;
+    transform: translateY(-5px);
+}
+
+.home:hover svg, .about:hover svg, .projects:hover svg, .contacts:hover svg {
+    transform: translateY(5px);
+}
