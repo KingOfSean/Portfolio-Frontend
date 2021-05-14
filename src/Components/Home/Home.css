@@ -14,7 +14,6 @@
     }
     55% {
         position: absolute;
-        background: rgb(14, 14, 14);
         top: 0;
         left: 0;
     }
@@ -133,6 +132,8 @@ footer {
     font-size: 20px;
     font-family: 'Caveat', cursive;
     margin-bottom: 5px;
+    gap: 0px;
+
 }
 
 .logo-page {
@@ -165,4 +166,27 @@ footer {
 .logo-page-enter {
     animation: shrinkEnter 1.5s;
     animation-fill-mode: forwards;
+}
+
+.enter {
+    font-size: 50px;
+    border-radius: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    box-sizing: border-box;
+    width: fit-content;
+    font-family: 'Great Vibes', cursive;
+    text-shadow: 0 1rem 2rem rgba(58, 58, 58, 0.5);
+}
+
+.enter:active, .enter:focus {
+    outline: none;
+    transform: translateY(5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.enter:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 5px 5px rgba(77, 77, 77, 0.5);
 }
