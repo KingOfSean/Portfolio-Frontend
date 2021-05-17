@@ -4,6 +4,7 @@ import About from './Components/About/About';
 import Contact from './Components/Contacts/Contacts';
 import Home from './Components/Home/Home';
 import Project from './Components/Projects/Projects';
+import Details from './Components/Projects/Details';
 import { RiHome4Fill } from "react-icons/ri";
 import { IoMdPerson } from "react-icons/io";
 import { IoMdContact } from "react-icons/io";
@@ -16,6 +17,7 @@ export default function App(){
   const [inspiration, setInspiration] = useState([]);
   const [enter, setEnter] = useState(false);
   const [footer, setFooter] = useState(false)
+  const [projectData, setProjectData] = useState([]);
 
   const hideHome = () => {
     setShowHome(false);
@@ -48,23 +50,23 @@ export default function App(){
     }
   }
 
-  // let slideIndex = 0;
-  
-  // const showQuoteSlides = (arr) => {
-  //   for(i = 0; i < arr.length; i++) {
-  //     arr[i].style.display = "none";
-  //   }
-  //   slideIndex++;
-  //   if (slideIndex > arr.length) {slideIndex = 1}
-  //   arr[slideIndex-1].style.display = "block";
-  //   setTimeout(showQuoteSlides, 2000);
-  // }
+
+  const getProjects = async () => {
+    try {
+        const res = await fetch('https://sean-portfolio-backend.herokuapp.com/projects');
+        const data = await res.json();
+        setProjectData(data.reverse());
+    } catch (error) {
+        console.log(error)
+    }
+}
 
   useEffect(() => {
     getInspiration();
+    getProjects();
   }, []);
 
-  console.log(inspiration.text)
+  console.log([...projectData])
   return (
     <div className="App">
       <nav>
@@ -75,7 +77,7 @@ export default function App(){
               <img className={enter? "logo-enter" : "logo"} src="https://i.imgur.com/sflbz7o.png" />
               <>{enter? null : <button className="enter" onClick={() => {
                 handleEnter();
-                setTimeout(handleFooter, 2000);
+                setTimeout(handleFooter, 1200);
               }}>Enter</button>}</>
             </div>
             <h1>Sean King's Portfolio</h1>
@@ -102,10 +104,18 @@ export default function App(){
       </nav>
       <main>
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path='/' exact component={footer? Home : null} />
           <Route path='/about' component={About} />
           <Route path='/projects' component={Project} />
           <Route path='/contacts' component={Contact} />
+          <Route path="/project/:_id" render={routerProps => {
+            console.log(routerProps);
+            const thisProject = [...projectData].filter(
+              (a) => a._id === routerProps.match.params._id
+            );
+            console.log(thisProject)
+              return <Details {...routerProps} thisProject={thisProject[0]} />
+          }} />
         </Switch>
       </main>
       <>{footer? <footer>By: Sean King</footer>: null}</>

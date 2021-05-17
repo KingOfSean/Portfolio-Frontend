@@ -8,7 +8,7 @@ export default function Project(){
 
     const getProjects = async () => {
         try {
-            const res = await fetch('http://localhost:9090/projects');
+            const res = await fetch('https://sean-portfolio-backend.herokuapp.com/projects');
             const data = await res.json();
             setProjectData(data.reverse());
         } catch (error) {
@@ -28,7 +28,7 @@ export default function Project(){
                 {projectData.map((project, i) => {
                     return (
                         <div>
-                            <Link to={`projects/${project._id}`}>
+                            <Link to={`project/${project._id}`}>
                                 <div className="project-container">
                                     <img src={project.image} alt={project._id} />
                                     <div className="description">

@@ -1,0 +1,29 @@
+.slider {
+    position: relative;
+    height: fit-content;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    overflow: hidden;
+}
+
+.slide-image {
+    margin: 0;
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slide {
+    margin: 0;
+    transform: translate(100%, 0);
+    transition: all .5s ease-in-out;
+}
+
+.slide.active {
+    margin: 0;
+    transform: translate(0, 0);
+    transition: all .5s ease-in-out;
+}

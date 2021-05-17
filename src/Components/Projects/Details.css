@@ -1,0 +1,13 @@
+.details h1 {
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+}
+
+.details-description {
+    color: white;
+    max-width: 500px;
+    margin: 80px;
+    font-size: 30px;
+    font-family: 'Kaushan Script', cursive;
+}

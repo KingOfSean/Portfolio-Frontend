@@ -106,9 +106,34 @@ footer {
 }
 
 .home-page {
+    display: flex;
+    flex-direction: column;
     color: white;
     font-family: 'Great Vibes', cursive;
     font-size: 30px;
+}
+
+.home-content {
+    display: flex;
+    justify-content: center;
+}
+
+.home-gallery {
+    align-self: center;
+    border: solid white;
+    border-radius: 40px;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.home-gallery h4 {
+    margin: 3px 0 7px 0;
+}
+
+.home-description {
+    max-width: 500px;
+    margin: 80px;
+    font-family: 'Kaushan Script', cursive;
 }
 
 
@@ -188,5 +213,6 @@ footer {
 
 .enter:hover {
     transform: translateY(-5px);
-    box-shadow: 10px 5px 5px rgba(77, 77, 77, 0.5);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
