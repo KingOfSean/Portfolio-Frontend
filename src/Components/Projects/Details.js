@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Details.css';
 
-const Details = ({ thisProject }) => {
+const Details = ({ thisProject, getInspiration }) => {
     return (
         <div className="details">
             <h1>{thisProject.title}</h1>
@@ -12,7 +12,7 @@ const Details = ({ thisProject }) => {
                 </div>
             </div>
             <div>
-                <Link to='/projects'>Back</Link>
+                <Link onClick={getInspiration} to='/projects'>Back</Link>
             </div>
         </div>
     )
