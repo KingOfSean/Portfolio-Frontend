@@ -105,9 +105,9 @@ export default function App(){
       <main>
         <Switch>
           <Route path='/' exact component={footer? Home : null} />
-          <Route path='/about' component={About} />
-          <Route path='/projects' component={Project} />
-          <Route path='/contacts' component={Contact} />
+          <Route path='/about' component={footer? About : null} />
+          <Route path='/projects' component={footer? Project : null} />
+          <Route path='/contacts' component={footer? Contact : null} />
           <Route path="/project/:_id" render={routerProps => {
             console.log(routerProps);
             const thisProject = [...projectData].filter(
