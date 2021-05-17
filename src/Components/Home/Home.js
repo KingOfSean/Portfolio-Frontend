@@ -2,12 +2,12 @@ import ImageSlider from '../Carousel/ImageSlider';
 import { ImageData } from '../Carousel/ImageData';
 import './Home.css';
 
-const projectPics = [
-    <img src="https://i.imgur.com/ruEdpGA.png" />,
-    <img src="https://i.imgur.com/iOzpbmm.png" />,
-    <img src="https://i.imgur.com/Am3L9Z4.png" />,
-    <img src="https://i.imgur.com/Xp3mUsU.png" />
-]
+// const projectPics = [
+//     <img src="https://i.imgur.com/ruEdpGA.png" />,
+//     <img src="https://i.imgur.com/iOzpbmm.png" />,
+//     <img src="https://i.imgur.com/Am3L9Z4.png" />,
+//     <img src="https://i.imgur.com/Xp3mUsU.png" />
+// ]
 
 export default function Home(){
     return (

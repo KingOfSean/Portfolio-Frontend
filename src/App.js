@@ -16,7 +16,8 @@ export default function App(){
   const [showHome, setShowHome] = useState(false);
   const [inspiration, setInspiration] = useState([]);
   const [enter, setEnter] = useState(false);
-  const [footer, setFooter] = useState(false)
+  const [footer, setFooter] = useState(false);
+  const [page, setPage] = useState(false);
   const [projectData, setProjectData] = useState([]);
 
   const hideHome = () => {
@@ -36,6 +37,10 @@ export default function App(){
   const handleFooter = () => {
     setFooter(true);
   };
+
+  const loadPage = () => {
+    setPage(true);
+  }
 
   const style = { height: "30px", width: "30px" }
 
@@ -74,10 +79,11 @@ export default function App(){
           <div className="nav-header">
             <div className={enter? "logo-page-enter" : "logo-page"}>
               <>{enter? null : <h1 className="front-header">Sean King's Portfolio WebPage</h1>}</>
-              <img className={enter? "logo-enter" : "logo"} src="https://i.imgur.com/sflbz7o.png" />
+              <img className={enter? "logo-enter" : "logo"} src="https://i.imgur.com/sflbz7o.png" alt="" />
               <>{enter? null : <button className="enter" onClick={() => {
                 handleEnter();
                 setTimeout(handleFooter, 1200);
+                setTimeout(loadPage, 1200);
               }}>Enter</button>}</>
             </div>
             <h1>Sean King's Portfolio</h1>
@@ -105,9 +111,9 @@ export default function App(){
       <main>
         <Switch>
           <Route path='/' exact component={footer? Home : null} />
-          <Route path='/about' component={footer? About : null} />
-          <Route path='/projects' component={footer? Project : null} />
-          <Route path='/contacts' component={footer? Contact : null} />
+          <Route path='/about' component={page? About : null} />
+          <Route path='/projects' component={page? Project : null} />
+          <Route path='/contacts' component={page? Contact : null} />
           <Route path="/project/:_id" render={routerProps => {
             console.log(routerProps);
             const thisProject = [...projectData].filter(
