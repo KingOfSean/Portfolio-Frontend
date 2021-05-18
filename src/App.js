@@ -120,7 +120,7 @@ export default function App(){
               (a) => a._id === routerProps.match.params._id
             );
             console.log(thisProject)
-              return <Details {...routerProps} thisProject={thisProject[0]} getInspiration={getInspiration} />
+              return <Details {...routerProps} thisProject={thisProject[0]} getInspiration={getInspiration} getProjects={getProjects} />
           }} />
         </Switch>
       </main>

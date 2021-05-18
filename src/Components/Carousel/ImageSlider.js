@@ -7,8 +7,8 @@ const ImageSlider = ({ slides }) => {
     const length = slides.length;
 
     const nextSlide = () => {
-        setCurrent(current === length - 1 ? 0 : current + 1)
-    }
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    };
 
     const autoPlayRef = useRef();
 
@@ -18,8 +18,8 @@ const ImageSlider = ({ slides }) => {
 
     useEffect(() => {
         const play = () => {
-            autoPlayRef.current()
-        }
+            autoPlayRef.current();
+        };
 
         const interval = setInterval(play, 2500)
         return () => clearInterval(interval)
@@ -27,7 +27,7 @@ const ImageSlider = ({ slides }) => {
 
     if (!Array.isArray(slides) || slides.length <= 0){
         return null;
-    }
+    };
 
     
 
@@ -38,10 +38,10 @@ const ImageSlider = ({ slides }) => {
                     <div className={index === current ? 'slide active': 'slide'} key={index} >
                         {index === current && (<img src={slide.image} alt="" className="slide-image" />)}
                     </div>
-                )
-            })}
+                );
+            })};
         </div>
-    )
-}
+    );
+};
 
-export default ImageSlider
+export default ImageSlider;

@@ -2,6 +2,7 @@
     color: white;
     font-family: 'Great Vibes', cursive;
     font-size: 60px;
+    margin-bottom: 0;
 }
 
 .details-description {
@@ -10,4 +11,33 @@
     margin: 80px;
     font-size: 30px;
     font-family: 'Kaushan Script', cursive;
+    margin-top: 5px;
+}
+.details-pic {
+    height: 400px;
+    width: 700px;
+    border: solid white;
+    border-radius: 40px;
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+.details-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+
+.details-content a, .details-content li {
+    text-decoration: underline;
+    color: white;
+    text-align: left;
+}
+
+.back {
+    text-decoration: none;
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
 }
