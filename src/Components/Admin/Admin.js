@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import './Admin.css'
 
-
-const Admin = () => {
+const Admin = ({ isLoggedIn, setLoggedIn }) => {
     const [formData, setFormData] = useState({
         title: "",
         description: "",
@@ -10,6 +10,43 @@ const Admin = () => {
         projectUrl: "",
         fullDescription: ""
     });
+
+    const [loginForm, setLoginForm] = useState({
+    username: "",
+    password: ""
+    });
+
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+          const response = await fetch("https://sean-portfolio-backend.herokuapp.com/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ ...loginForm })
+          });
+          const data = await response.json();
+          if (data.token) {
+            window.localStorage.setItem("token", data.token);
+            window.localStorage.setItem("username", data.username);
+            setLoggedIn(true);
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      };
+    
+      const handleLogout = () => {
+        window.localStorage.clear();
+        setLoggedIn(false);
+      };
+    
+      const handleLoginChange = (e) => {
+        setLoginForm({ ...loginForm, [e.target.id]: e.target.value });
+      };
+
 
     const handleChange = (e) => {
         setFormData({
@@ -62,8 +99,9 @@ const Admin = () => {
     }, []);
 
     return (
-        <div>
-            <form onSubmit={createProject}>
+        <div className="create-content">
+            <>{isLoggedIn?
+            <form className="create-form" onSubmit={createProject}>
             <label>Title: {" "}
                 <input className="create" type="text" id="title" value={formData.title} onChange={handleChange}></input>{" "}<br />
                 </label>
@@ -88,8 +126,43 @@ const Admin = () => {
                 <input className="create" type="text" id="fullDescription" value={formData.fullDescription} onChange={handleChange}></input>{" "}<br />
                 </label>
                 <br />
-                <input className="submit" type="submit"></input>
+                <div id="submit">
+                    <input className="submit" type="submit" />
+                    <button id="logout" className="submit" onClick={handleLogout}>LogOut</button>
+                </div>
             </form>
+            :
+            <form className="login" onSubmit={handleLogin}>
+                <label>
+                    {" "}
+                    Username:{" "}
+                    <input
+                    className="create"
+                    type="text"
+                    id="username"
+                    value={loginForm.username}
+                    onChange={handleLoginChange}
+                />
+                </label>
+                <br />
+                <label>
+                    {" "}
+                    Password:{" "}
+                    <input
+                    className="create"
+                    type="password"
+                    id="password"
+                    value={loginForm.password}
+                    onChange={handleLoginChange}
+                />
+                </label>
+                <br />
+                <br />
+                <div id="submit">
+                    <input className="submit" type="submit" />
+                </div>
+            </form>}
+            </>
         </div>
     )
 }

@@ -20,6 +20,7 @@ export default function App(){
   const [footer, setFooter] = useState(false);
   const [page, setPage] = useState(false);
   const [projectData, setProjectData] = useState([]);
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   const hideHome = () => {
     setShowHome(false);
@@ -116,9 +117,9 @@ export default function App(){
         <Switch>
           <Route path='/' exact component={footer? Home : null} />
           <Route path='/about' component={page? About : null} />
-          <Route path='/projects' component={page? Project : null} />
+          <Route path='/projects' render={() => page? <Project setFooter={setFooter} isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn} /> : null} />
           <Route path='/contacts' component={page? Contact : null} />
-          <Route path='/admin' component={page? Admin : null} />
+          <Route path='/admin' render={() => page? <Admin isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn} /> : null} />
           <Route path="/project/:_id" render={routerProps => {
             console.log(routerProps);
             const thisProject = [...projectData].filter(
