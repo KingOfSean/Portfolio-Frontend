@@ -5,6 +5,7 @@ import Contact from './Components/Contacts/Contacts';
 import Home from './Components/Home/Home';
 import Project from './Components/Projects/Projects';
 import Details from './Components/Projects/Details';
+import Admin from './Components/Admin/Admin';
 import { RiHome4Fill } from "react-icons/ri";
 import { IoMdPerson } from "react-icons/io";
 import { IoMdContact } from "react-icons/io";
@@ -105,6 +106,9 @@ export default function App(){
             <div>
               <Link className="contacts" onClick={revealHome} to='/contacts'><IoMdContact style={style}/>Contact</Link>
             </div>
+            <div>
+              <Link className="admin" onClick={revealHome} to='/admin'><IoMdContact style={style}/>Admin</Link>
+            </div>
           </div>
         </div>
       </nav>
@@ -114,6 +118,7 @@ export default function App(){
           <Route path='/about' component={page? About : null} />
           <Route path='/projects' component={page? Project : null} />
           <Route path='/contacts' component={page? Contact : null} />
+          <Route path='/admin' component={page? Admin : null} />
           <Route path="/project/:_id" render={routerProps => {
             console.log(routerProps);
             const thisProject = [...projectData].filter(

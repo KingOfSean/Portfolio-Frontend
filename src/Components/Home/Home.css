@@ -64,7 +64,7 @@
 
 .nav-links {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     align-items: baseline;
     justify-content: space-evenly;
     align-content: space-between;
@@ -137,13 +137,13 @@ footer {
 }
 
 
-.home:hover, .about:hover, .projects:hover, .contacts:hover {
+.home:hover, .about:hover, .projects:hover, .contacts:hover, .admin:hover {
     font-weight: bold;
     font-size: 16px;
     transform: translateY(-5px);
 }
 
-.home:hover svg, .about:hover svg, .projects:hover svg, .contacts:hover svg {
+.home:hover svg, .about:hover svg, .projects:hover svg, .contacts:hover svg, .admin:hover svg {
     transform: translateY(5px);
 }
 

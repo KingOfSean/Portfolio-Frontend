@@ -14,7 +14,23 @@ export default function Project(){
         } catch (error) {
             console.log(error)
         }
-    }
+    };
+
+    const deleteProject = async (e, id) => {
+        try {
+          const response = await fetch(`https://sean-portfolio-backend.herokuapp.com/projects/${id}`, {
+            method: "DELETE",
+            headers: {
+              "Content-Type": "application/json"
+            }
+          });
+          const data = await response.json(); 
+        } catch (error) {
+          console.error(error);
+        } finally {
+          await getProjects();
+        }
+      };
 
     useEffect(() => {
         getProjects();
@@ -38,6 +54,9 @@ export default function Project(){
                             </Link>
                             <div>
                                 <p>{project.title}</p>
+                                <button onClick={(e) => {
+                                    deleteProject(e, project._id);
+                                }}>DELETE</button>
                             </div>
                         </div>
                     )
