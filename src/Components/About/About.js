@@ -11,6 +11,17 @@ export default function About(){
     Writing code and gaining knowledge, playing video games, and building computers. I value  my family and friends, my work, positivity, and fairness/ equality. 
                     </p>
                 </div>
+                <img className="my-pic" src="https://i.imgur.com/4jPhPSV.jpg" alt="" />
+            </div>
+            <div className="skills">
+                <h1>Skills</h1>
+                <ul>
+                    <li>HTML/CSS/JS</li>
+                    <li>React</li>
+                    <li>Postgres/ SQL</li>
+                    <li>MERN Stack</li>
+                    <li>Django/ Python</li>
+                </ul>
             </div>
         </div>
     );

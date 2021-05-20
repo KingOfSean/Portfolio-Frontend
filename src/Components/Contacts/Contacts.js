@@ -17,6 +17,9 @@ export default function Contact(){
                     <li>
                         <a className="contact-me" href="https://github.com/KingOfSean" target="_target">My GitHub</a>
                     </li>
+                    <li>
+                        <a className="contact-me" href="https://docs.google.com/document/d/1Hn4tImuvlmjrzgAHgG-rAPP9_bXwkUcOJpcYbPVd_ZU/edit?usp=sharing" target="_target">My Resume</a>
+                    </li>
                 </ul>
                 <img className="contact-img" src="https://i.imgur.com/pAzk4jL.png" alt="" />
             </div>

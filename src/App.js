@@ -10,6 +10,7 @@ import { RiHome4Fill } from "react-icons/ri";
 import { IoMdPerson } from "react-icons/io";
 import { IoMdContact } from "react-icons/io";
 import { IoIosFolder } from "react-icons/io";
+import { RiAdminFill } from "react-icons/ri";
 import './App.css';
 
 
@@ -108,7 +109,7 @@ export default function App(){
               <Link className="contacts" onClick={revealHome} to='/contacts'><IoMdContact style={style}/>Contact</Link>
             </div>
             <div>
-              <Link className="admin" onClick={revealHome} to='/admin'><IoMdContact style={style}/>Admin</Link>
+              <Link className="admin" onClick={revealHome} to='/admin'><RiAdminFill style={style}/>Admin</Link>
             </div>
           </div>
         </div>

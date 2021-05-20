@@ -1,13 +1,54 @@
+.about-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .about-content h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
     font-family: 'Great Vibes', cursive;
     font-size: 60px;
 }
 
 .about-me {
+    margin: 30px;
     color: white;
     font-size: 30px;
     font-family: 'Kaushan Script', cursive;
     max-width: 500px;
 }
 
+.my-pic {
+    margin: 30px;
+    border: solid white;
+    border-radius: 40px;
+    height: 400px;
+    width: 400px;
+    vertical-align: middle;
+}
+
+.skills {
+    display: block;
+    justify-self: center;
+    align-self: center;
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    font-size: 40px;
+    margin-right: 0;
+}
+
+.skills ul {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills li {
+    display: block;
+    font-size: 25px;
+    font-family: 'Kaushan Script', cursive;
+}

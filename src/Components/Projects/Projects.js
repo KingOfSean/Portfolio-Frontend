@@ -34,7 +34,8 @@ export default function Project({ setFooter, isLoggedIn }) {
               "Content-Type": "application/json"
             }
           });
-          const data = await response.json(); 
+          const data = await response.json();
+          console.log(data) 
         } catch (error) {
           console.error(error);
         } finally {
@@ -52,6 +53,7 @@ export default function Project({ setFooter, isLoggedIn }) {
             },
             body: JSON.stringify(data)
           });
+          console.log(response)
         } catch (error) {
           console.error(error);
         } finally {

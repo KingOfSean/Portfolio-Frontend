@@ -67,6 +67,7 @@ const Admin = ({ isLoggedIn, setLoggedIn }) => {
                 }, 
                 body: JSON.stringify(body)
             });
+            console.log(response)
         } catch (error) {
             console.log(error)
         } finally {
