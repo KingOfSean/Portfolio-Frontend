@@ -23,6 +23,10 @@ I used quite a few technologies to create this app.
 1. External API
     - https://type.fit/api/quotes
 
+2. My API
+    - https://sean-portfolio-backend.herokuapp.com/projects/
+    - Github: https://github.com/KingOfSean/Portfolio-backend.git
+
 ## Planning
 <img src="https://i.imgur.com/YLFdA4b.png" />
 <img src="https://i.imgur.com/hBtOGdn.png" />
