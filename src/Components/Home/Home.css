@@ -216,3 +216,36 @@ footer {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    #quotes {
+        display: none;
+    }
+    .nav-header {
+        display: none;
+    }
+    .home-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+    }
+    .home-gallery {
+        width: fit-content;
+    }
+    .home-page h1 {
+        max-width: 500px;
+        margin-bottom: 0px;
+    }
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav {
+        max-width: 600px;
+    }
+    .nav-links {
+        margin: 0;
+    }
+}
