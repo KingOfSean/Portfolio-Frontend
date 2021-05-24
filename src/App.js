@@ -89,7 +89,7 @@ export default function App(){
                 setTimeout(loadPage, 1200);
               }}>Enter</button>}</>
             </div>
-            <h1>Sean King's Portfolio</h1>
+            <h1 className="nav-title">Sean King's Portfolio</h1>
           </div>
           <div id="quotes">
             <h3>"{inspiration.text}"</h3>

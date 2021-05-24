@@ -30,3 +30,17 @@
     text-align: left;
     margin-right: 30px;
 }
+
+@media screen and (max-width: 600px) {
+    .contact-body {
+        flex-direction: column;
+    }
+    .contact {
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    .contact-img {
+        max-height: 200px;
+    }
+}

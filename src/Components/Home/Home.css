@@ -221,7 +221,10 @@ footer {
     #quotes {
         display: none;
     }
-    .nav-header {
+    .front-header {
+        max-width: 500px;
+    }
+    .nav-title {
         display: none;
     }
     .home-content {
@@ -230,10 +233,14 @@ footer {
         align-items: center;
         margin-top: 0px;
     }
+    .home-description {
+        max-width: 500px;
+    }
     .home-gallery {
         width: fit-content;
     }
     .home-page h1 {
+        align-self: center;
         max-width: 500px;
         margin-bottom: 0px;
     }
@@ -241,9 +248,6 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    nav {
-        max-width: 600px;
     }
     .nav-links {
         margin: 0;
