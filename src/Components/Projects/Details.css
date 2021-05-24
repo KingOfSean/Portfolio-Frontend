@@ -41,3 +41,14 @@
     font-family: 'Great Vibes', cursive;
     font-size: 60px;
 }
+
+@media screen and (max-width: 600px) {
+    .details-content {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .details-pic {
+        max-height: 200px;
+        max-width: 400px;
+    }
+}
