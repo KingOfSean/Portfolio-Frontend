@@ -1,255 +1,266 @@
 @keyframes shrinkEnter {
-    0% {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: absolute;
-        background: rgb(14, 14, 14);
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        margin: 0px;
-    }
-    55% {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    100% {
-        width: 50px;
-        height: 50px;
-        margin: 5px 5px 0 0;
-    }
+	0% {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: absolute;
+		background: rgb(14, 14, 14);
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		margin: 0px;
+	}
+	55% {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	100% {
+		width: 50px;
+		height: 50px;
+		margin: 5px 5px 0 0;
+	}
 }
 
 @keyframes shrinkLogo {
-    0% {
-        vertical-align: middle;
-        width: 300px;
-        height: 300px;
-    }
-    /* 55% {
+	0% {
+		vertical-align: middle;
+		width: 300px;
+		height: 300px;
+	}
+	/* 55% {
         vertical-align: middle;
         width: 100px;
         height: 100px;
     } */
-    100% {
-        width: 50px;
-        height: 50px;
-        margin: 5px 5px 20px 0;
-        vertical-align: middle;
-    }
+	100% {
+		width: 50px;
+		height: 50px;
+		margin: 5px 5px 20px 0;
+		vertical-align: middle;
+	}
 }
 
 @keyframes rotate {
-    0%{
-        transform: rotateY(0deg);
-    }
-    100%{
-        transform: rotateY(360deg);
-    }
-    
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    border-radius: 40px;
-    box-shadow: 10px 5px 5px rgba(77, 77, 77, 0.5);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: black;
+	border-radius: 40px;
+	box-shadow: 10px 5px 5px rgba(77, 77, 77, 0.5);
 }
 
 .nav-links {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    align-items: baseline;
-    justify-content: space-evenly;
-    align-content: space-between;
-    width: 400px;
-    margin-right: 100px;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	align-items: baseline;
+	justify-content: space-evenly;
+	align-content: space-between;
+	width: 400px;
+	margin-right: 100px;
 }
 
 .nav-links a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-decoration: none;
-    color: white;
-    margin-right: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-decoration: none;
+	color: white;
+	margin-right: 5px;
 }
 
 .nav-header {
-    display: flex;
-    justify-content: center;
-    text-shadow: rgba(255, 255, 255, 0.5);
-    align-items: baseline;
-    color: white;
-    margin-left: 18px;
-    font-family: 'Kaushan Script', cursive;
+	display: flex;
+	justify-content: center;
+	text-shadow: rgba(255, 255, 255, 0.5);
+	align-items: baseline;
+	color: white;
+	margin-left: 18px;
+	font-family: "Kaushan Script", cursive;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    color: white;
-    position: sticky;
-    margin-top: 15px;
-    padding: 1rem;
-    text-align: center;
-    background-color: black;
-    margin-top: 2%;
-    font-size: 15px;
+	display: flex;
+	justify-content: center;
+	color: white;
+	position: sticky;
+	margin-top: 15px;
+	padding: 1rem;
+	text-align: center;
+	background-color: black;
+	margin-top: 2%;
+	font-size: 15px;
 }
 
 .home-page {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    font-family: 'Great Vibes', cursive;
-    font-size: 30px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	font-family: "Great Vibes", cursive;
+	font-size: 30px;
 }
 
 .home-content {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .home-gallery {
-    align-self: center;
-    border: solid white;
-    border-radius: 40px;
-    width: fit-content;
-    overflow: hidden;
+	align-self: center;
+	border: solid white;
+	border-radius: 40px;
+	width: fit-content;
+	overflow: hidden;
+	color: white;
+}
+
+.gal-link {
+	text-decoration: none;
+	align-self: center;
 }
 
 .home-gallery h4 {
-    margin: 3px 0 7px 0;
+	margin: 3px 0 7px 0;
 }
 
 .home-description {
-    max-width: 500px;
-    margin: 80px;
-    font-family: 'Kaushan Script', cursive;
+	max-width: 500px;
+	margin: 80px;
+	font-family: "Roboto", sans-serif;
 }
 
-
-.home:hover, .about:hover, .projects:hover, .contacts:hover, .admin:hover {
-    font-weight: bold;
-    font-size: 16px;
-    transform: translateY(-5px);
+.home:hover,
+.about:hover,
+.projects:hover,
+.contacts:hover,
+.admin:hover {
+	font-weight: bold;
+	font-size: 16px;
+	transform: translateY(-5px);
 }
 
-.home:hover svg, .about:hover svg, .projects:hover svg, .contacts:hover svg, .admin:hover svg {
-    transform: translateY(5px);
+.home:hover svg,
+.about:hover svg,
+.projects:hover svg,
+.contacts:hover svg,
+.admin:hover svg {
+	transform: translateY(5px);
 }
 
 #quotes {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    width: fit-content;
-    height: fit-content;
-    color: white;
-    font-size: 20px;
-    font-family: 'Caveat', cursive;
-    margin-bottom: 5px;
-    gap: 0px;
-
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	width: fit-content;
+	height: fit-content;
+	color: white;
+	font-size: 20px;
+	font-family: "Caveat", cursive;
+	margin-bottom: 5px;
+	gap: 0px;
 }
 
 .logo-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    background: rgb(14, 14, 14);
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    font-family: 'Great Vibes', cursive;
-    font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	background: rgb(14, 14, 14);
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	font-family: "Great Vibes", cursive;
+	font-size: 30px;
 }
 
-
 .logo {
-    vertical-align: middle;
-    width: 300px;
-    height: 300px;
-    animation: rotate 3s linear 1.5s infinite;
+	vertical-align: middle;
+	width: 300px;
+	height: 300px;
+	animation: rotate 3s linear 1.5s infinite;
 }
 
 .logo-enter {
-    animation: shrinkLogo 1.5s;
-    animation-fill-mode: forwards;
+	animation: shrinkLogo 1.5s;
+	animation-fill-mode: forwards;
 }
 .logo-page-enter {
-    animation: shrinkEnter 1.5s;
-    animation-fill-mode: forwards;
+	animation: shrinkEnter 1.5s;
+	animation-fill-mode: forwards;
 }
 
 .enter {
-    font-size: 50px;
-    border-radius: 15px;
-    background: transparent;
-    border: none;
-    color: white;
-    box-sizing: border-box;
-    width: fit-content;
-    font-family: 'Great Vibes', cursive;
-    text-shadow: 0 1rem 2rem rgba(58, 58, 58, 0.5);
+	font-size: 50px;
+	border-radius: 15px;
+	background: transparent;
+	border: none;
+	color: white;
+	box-sizing: border-box;
+	width: fit-content;
+	font-family: "Great Vibes", cursive;
+	text-shadow: 0 1rem 2rem rgba(58, 58, 58, 0.5);
 }
 
-.enter:active, .enter:focus {
-    outline: none;
-    transform: translateY(5px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+.enter:active,
+.enter:focus {
+	outline: none;
+	transform: translateY(5px);
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .enter:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+	transform: translateY(-5px);
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
-    #quotes {
-        display: none;
-    }
-    .front-header {
-        max-width: 500px;
-    }
-    .nav-title {
-        display: none;
-    }
-    .home-content {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0px;
-    }
-    .home-description {
-        max-width: 500px;
-    }
-    .home-gallery {
-        width: fit-content;
-    }
-    .home-page h1 {
-        align-self: center;
-        max-width: 500px;
-        margin-bottom: 0px;
-    }
-    .nav-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .nav-links {
-        margin: 0;
-    }
+	#quotes {
+		display: none;
+	}
+	.front-header {
+		max-width: 500px;
+	}
+	.nav-title {
+		display: none;
+	}
+	.home-content {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 0px;
+	}
+	.home-description {
+		max-width: 500px;
+	}
+	.home-gallery {
+		width: fit-content;
+	}
+	.home-page h1 {
+		align-self: center;
+		max-width: 500px;
+		margin-bottom: 0px;
+	}
+	.nav-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.nav-links {
+		margin: 0;
+	}
 }

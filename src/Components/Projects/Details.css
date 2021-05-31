@@ -1,54 +1,55 @@
 .details h1 {
-    color: white;
-    font-family: 'Great Vibes', cursive;
-    font-size: 60px;
-    margin-bottom: 0;
+	color: white;
+	font-family: "Great Vibes", cursive;
+	font-size: 60px;
+	margin-bottom: 0;
 }
 
 .details-description {
-    color: white;
-    max-width: 500px;
-    margin: 80px;
-    font-size: 30px;
-    font-family: 'Kaushan Script', cursive;
-    margin-top: 5px;
+	color: white;
+	max-width: 500px;
+	margin: 80px;
+	font-size: 30px;
+	font-family: "Roboto", sans-serif;
+	margin-top: 5px;
 }
 .details-pic {
-    height: 400px;
-    width: 700px;
-    border: solid white;
-    border-radius: 40px;
-    vertical-align: middle;
-    margin-top: 0;
+	height: 400px;
+	width: 700px;
+	border: solid white;
+	border-radius: 40px;
+	vertical-align: middle;
+	margin-top: 0;
 }
 
 .details-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0;
 }
 
-.details-content a, .details-content li {
-    text-decoration: underline;
-    color: white;
-    text-align: left;
+.details-content a,
+.details-content li {
+	text-decoration: underline;
+	color: white;
+	text-align: left;
 }
 
 .back {
-    text-decoration: none;
-    color: white;
-    font-family: 'Great Vibes', cursive;
-    font-size: 60px;
+	text-decoration: none;
+	color: white;
+	font-family: "Great Vibes", cursive;
+	font-size: 60px;
 }
 
 @media screen and (max-width: 600px) {
-    .details-content {
-        flex-direction: column;
-        margin-bottom: 30px;
-    }
-    .details-pic {
-        max-height: 200px;
-        max-width: 400px;
-    }
+	.details-content {
+		flex-direction: column;
+		margin-bottom: 30px;
+	}
+	.details-pic {
+		max-height: 200px;
+		max-width: 400px;
+	}
 }
