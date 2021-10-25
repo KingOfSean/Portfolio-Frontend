@@ -16,9 +16,9 @@ import "./App.css";
 export default function App() {
 	const [showHome, setShowHome] = useState(false);
 	const [inspiration, setInspiration] = useState([]);
-	const [enter, setEnter] = useState(true);
-	const [footer, setFooter] = useState(true);
-	const [page, setPage] = useState(true);
+	const [enter, setEnter] = useState(false);
+	const [footer, setFooter] = useState(false);
+	const [page, setPage] = useState(false);
 	const [projectData, setProjectData] = useState([]);
 	const [isLoggedIn, setLoggedIn] = useState(false);
 
