@@ -9,15 +9,20 @@ export default function Contact() {
 			<div className="contact-body">
 				<ul>
 					<li>
-						<a className="contact-me" href="mailto:seanking2380@gmail.com">
+						<a
+							className="contact-me"
+							href="mailto:seanking2380@gmail.com"
+							// rel="mailto:seanking2380@gmail.com"
+						>
 							Email: seanking2380@gmail.com
 						</a>
 					</li>
 					<li>
 						<a
 							className="contact-me"
-							href="https://www.linkedin.com/in/sean-michael-king/"
+							href="https://www.linkedin.com/in/kingofseanm/"
 							target="_target"
+							// rel="https://www.linkedin.com/in/kingofseanm/"
 						>
 							Linkedin
 						</a>
@@ -37,6 +42,7 @@ export default function Contact() {
 							href={SeanKingResume}
 							download
 							target="_blank"
+							rel="noreferrer"
 						>
 							My Resume
 						</a>
