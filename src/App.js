@@ -59,7 +59,7 @@ export default function App() {
 	const getProjects = async () => {
 		try {
 			const res = await fetch(
-				"https://sean-portfolio-backend.herokuapp.com/projects",
+				"https://portfolio-backend-l7rs.onrender.com/projects",
 			);
 			const data = await res.json();
 			setProjectData(data.reverse());
