@@ -17,7 +17,7 @@ export default function Project({setFooter, isLoggedIn}) {
 	const getProjects = async () => {
 		try {
 			const res = await fetch(
-				"https://sean-portfolio-backend.herokuapp.com/projects",
+				"https://portfolio-backend-l7rs.onrender.com/projects",
 			);
 			const data = await res.json();
 			setProjectData(data.reverse());
@@ -29,7 +29,7 @@ export default function Project({setFooter, isLoggedIn}) {
 	const deleteProject = async (e, id) => {
 		try {
 			const response = await fetch(
-				`https://sean-portfolio-backend.herokuapp.com/projects/${id}`,
+				`https://portfolio-backend-l7rs.onrender.com/projects/${id}`,
 				{
 					method: "DELETE",
 					headers: {
@@ -49,7 +49,7 @@ export default function Project({setFooter, isLoggedIn}) {
 	const updateProject = async (data, id) => {
 		try {
 			const response = await fetch(
-				`https://sean-portfolio-backend.herokuapp.com/projects/${id}`,
+				`https://portfolio-backend-l7rs.onrender.com/projects/${id}`,
 				{
 					method: "PUT",
 					headers: {
